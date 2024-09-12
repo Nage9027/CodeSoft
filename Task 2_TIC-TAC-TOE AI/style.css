@@ -1,0 +1,171 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url('code_soft.jpg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.text {
+    display: inline-block;
+}
+
+.tic {
+    color: #ff4c4c; /* Red */
+}
+
+.tac {
+    color: #4caf50; /* Green */
+}
+
+.toe {
+    color: #2196f3; /* Blue */
+}
+
+.ai {
+    color: #ffeb3b; /* Yellow */
+}
+
+.scoreboard {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.ai-scoreboard {
+    background: #ff5722; /* Deep orange for AI scoreboard */
+    color: #ffffff; /* White text for AI scoreboard */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-size: 18px;
+    text-align: center;
+}
+
+.human-scoreboard {
+    background: #2196f3; /* Bright blue for Human scoreboard */
+    color: #ffffff; /* White text for Human scoreboard */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-size: 18px;
+    text-align: center;
+}
+
+.scoreboard h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.scoreboard div {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+/* Chessboard colors */
+.cell:nth-child(odd) {
+    background-color: #e0e0e0; /* Light grey for odd cells */
+}
+
+.cell:nth-child(even) {
+    background-color: #a7c7e7; /* Light blue for even cells */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Undo Button */
+.undo-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50; /* Green background for undo button */
+    color: #ffffff; /* White text for undo button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tie Scoreboard */
+.tie-scoreboard {
+    background: #4caf50; /* Green background for Tie scoreboard */
+    color: #ffffff; /* White text for Tie scoreboard */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    font-size: 18px;
+    text-align: center;
+}
+
+.tie-scoreboard h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tie-scoreboard div {
+    font-size: 36px;
+    font-weight: bold;
+}
